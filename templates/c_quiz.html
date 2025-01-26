@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    python_quiz
+{% endblock %}
+
+{% block main %}
+    <h1>C quiz</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section =>{
+                let buttons = section.querySelectorAll('button');
+                buttons.forEach(button =>{
+                    button.addEventListener('click', function(e) {
+                        if (!section.classList.contains('answered')) {
+                            if (button.classList.contains('correct')) {
+                                button.style.backgroundColor = '#b1eb94';
+                                section.querySelector('.feedback').innerHTML = 'correct!';
+                            }
+                            else {
+                                button.style.backgroundColor = '#f58884';
+                                section.querySelector('.feedback').innerHTML = 'incorrect :(';
+                            }
+                            section.classList.add('answered');
+                        }
+                        e.preventDefault();
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <div class="section">
+            <hr>
+            <h3>
+                #include &lt;stdio.h&gt; <br>
+                int main (void)<br>
+                {<br>
+                    // anything here<br>
+                }<br>
+                what this whole block of code known as in technical terms ?
+            </h3>
+            <p></p>
+
+            <button class="correct">Boilerplate</button>
+            <button class="incorrect">Boiled plate</button>
+            <button class="incorrect">function's</button>
+            <button class="incorrect">i dont know</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section">
+            <hr>
+            <h3>
+                the correct way to print<br>
+                hello, world in screen in C is ?<br>
+                    1. print('hello, world')<br>
+                    2. printf("hello, world");<br>
+                    3. printf('hello, world');<br>
+                    4. print('hello, world')<br>
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="correct">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback" class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                malloc stand for ?<br>
+                    1. memory allocation<br>
+                    2. metual allocation<br>
+                    3. memo allocation<br>
+                    4. modle allocation<br>
+            </h3>
+
+            <button class="correct">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                after using the memory which is allocated through malloc <br>
+                what we need to do if we will never going to use it again?
+            </h3>
+
+            <button class="correct">free()</button>
+            <button class="incorrect">del()</button>
+            <button class="incorrect">clear()</button>
+            <button class="incorrect">pop()</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which data structure give O(1) runtime for search?
+            </h3>
+
+            <button class="incorrect">tries</button>
+            <button class="correct">hash table</button>
+            <button class="incorrect">tree</button>
+            <button class="incorrect">Linked List</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                what is the Big O to prepend the linked list
+            </h3>
+
+            <button class="incorrect">O(n)</button>
+            <button class="incorrect">O(nlog(n))</button>
+            <button class="incorrect">O(n^2)</button>
+            <button class="correct">O(1)</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                the search time required to search for an avrage case in binary tree is
+            </h3>
+
+            <button class="incorrect">O(n)</button>
+            <button class="correct">O(log(n))</button>
+            <button class="incorrect">O(nlog(n))</button>
+            <button class="incorrect">O(1)</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                in array can memory be dynamically allocated?
+            </h3>
+
+            <button class="incorrect">maybe</button>
+            <button class="incorrect">Yes</button>
+            <button class="correct">No</button>
+            <button class="incorrect">only god Knows</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                let C is a 2D array and i want to access <br>
+                2nd element of the 1st element from the 2D array<br>
+                then how can i access that?
+            </h3>
+
+            <button class="incorrect">C[1][0]</button>
+            <button class="incorrect">C[2][1]</button>
+            <button class="incorrect">C[1][2]</button>
+            <button class="correct">C[0][1]</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+
+        <div class="section" >
+            <hr>
+            <h3>
+                C use ______ to convert source code into machine level code
+            </h3>
+
+            <button class="incorrect">Assembly</button>
+            <button class="correct">Compiler</button>
+            <button class="incorrect">interpreter</button>
+            <button class="incorrect">cloud</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <form action="/c_quiz" method="post">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}
+

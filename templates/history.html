@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+    <h1>History</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Quiz</th>
+                <th scope="col">attempt</th>
+                <th scope="col">when</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data %}
+                <tr>
+                    <td>{{ record["quiz"] }}</td>
+                    <td>{{ record["attempt"] }}</td>
+                    <td>{{ record["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>That's All</h2>
+{% endblock %}

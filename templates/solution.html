@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    solution
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Languages</th>
+                <th scope="col">Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python</td>
+                <td><a href="/python_solution">
+                    <button class="btn btn-primary" >Solution</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td><a href="/c_solution">
+                    <button class="btn btn-primary" >Solution</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td><a href="/sql_solution">
+                    <button class="btn btn-primary" >Solution</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>web_frontPack</td>
+                <td><a href="/wed_frontPack_solution">
+                    <button class="btn btn-primary" >Solution</button>
+                </a></td>
+            </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    python_quiz
+{% endblock %}
+
+{% block main %}
+    <h1>SQL quiz</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section =>{
+                let buttons = section.querySelectorAll('button');
+                buttons.forEach(button =>{
+                    button.addEventListener('click', function(e) {
+                        if (!section.classList.contains('answered')) {
+                            if (button.classList.contains('correct')) {
+                                button.style.backgroundColor = '#b1eb94';
+                                section.querySelector('.feedback').innerHTML = 'correct!';
+                            }
+                            else {
+                                button.style.backgroundColor = '#f58884';
+                                section.querySelector('.feedback').innerHTML = 'incorrect :(';
+                            }
+                            section.classList.add('answered');
+                        }
+                        e.preventDefault();
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                SQL stand for ?<br>
+                1. Stucture query language<br>
+                2. struct qur lang<br>
+                3. std qur lang<br>
+                4. std qur ltd. <br>
+            </h3>
+            <p></p>
+
+            <button class="correct">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                SQL work on?
+            </h3>
+
+            <button class="correct">RDBMS</button>
+            <button class="incorrect">DBMS</button>
+            <button class="incorrect">NRDB</button>
+            <button class="incorrect">RDBS</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                RDBMS stand for <br>
+                relational database management source<br>
+                ture or not<br>
+            </h3>
+
+            <button class="incorrect">maybe</button>
+            <button class="incorrect">true</button>
+            <button class="correct">flase</button>
+            <button class="incorrect">only god knows</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                alter is a ______ command ?
+            </h3>
+
+            <button class="incorrect">TCL</button>
+            <button class="incorrect">DML</button>
+            <button class="correct">DDL</button>
+            <button class="incorrect">MVC</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                would it be right to say create is DML command?
+            </h3>
+
+            <button class="incorrect">who cares</button>
+            <button class="correct">Nope</button>
+            <button class="incorrect">yeap</button>
+            <button class="incorrect">not sure</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                if I want to delete a roll_no column from table student.<br>
+                alter table student ____ roll_no ;
+            </h3>
+
+            <button class="correct">drop</button>
+            <button class="incorrect">delete</button>
+            <button class="incorrect">add</button>
+            <button class="incorrect">modify</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                if I want to copy whole table product then this command will work <br>
+                create table x as select * from product;
+            </h3>
+
+            <button class="incorrect">why</button>
+            <button class="incorrect">not sure</button>
+            <button class="incorrect">who cares</button>
+            <button class="correct">yeah</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which command is use to view structure of table
+            </h3>
+
+            <button class="incorrect">DCES</button>
+            <button class="incorrect">DCSE</button>
+            <button class="correct">DESC</button>
+            <button class="incorrect">DESE</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                in order to get unique value of a column which command is used
+            </h3>
+
+            <button class="incorrect">UNIQUE</button>
+            <button class="correct">DISTINCT</button>
+            <button class="incorrect">DIFFERENT</button>
+            <button class="incorrect">SINGLE</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+
+        <div class="section" >
+            <hr>
+            <h3>
+                to veiw how many tables are in a database<br>
+                we can do:<br>
+                1. view tables;<br>
+                2. see tables; <br>
+                3. show tables; <br>
+                4. get tables; <br>
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="incorrect">2</button>
+            <button class="correct">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <form action="/sql_quiz" method="post">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    python_quiz
+{% endblock %}
+
+{% block main %}
+    <h1>Python quiz</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section =>{
+                let buttons = section.querySelectorAll('button');
+                buttons.forEach(button =>{
+                    button.addEventListener('click', function(e) {
+                        if (!section.classList.contains('answered')) {
+                            if (button.classList.contains('correct')) {
+                                button.style.backgroundColor = '#b1eb94';
+                                section.querySelector('.feedback').innerHTML = 'correct!';
+                            }
+                            else {
+                                button.style.backgroundColor = '#f58884';
+                                section.querySelector('.feedback').innerHTML = 'incorrect :(';
+                            }
+                            section.classList.add('answered');
+                        }
+                        e.preventDefault();
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                name = horse <br>
+                print(name.capitalize())<br>
+                then what will be the output ?
+            </h3>
+            <p></p>
+
+            <button class="incorrect">horse</button>
+            <button class="incorrect">HoRsE</button>
+            <button class="correct">Horse</button>
+            <button class="incorrect">hORSE</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                name='joe'<br>
+                print(name.isalnum())<br>
+                then what will be the output ?
+            </h3>
+
+            <button class="correct">True</button>
+            <button class="incorrect">1</button>
+            <button class="incorrect">False</button>
+            <button class="incorrect">0</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                9_student = [1,2,3,4,5,6,7,8,9]<br>
+                print(9_student)<br>
+                is there any error in this code or not
+            </h3>
+
+            <button class="correct">yes</button>
+            <button class="incorrect">no</button>
+            <button class="incorrect">maybe</button>
+            <button class="incorrect">only god knows</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                pi = 3.14159<br>
+                print(round(pi))
+            </h3>
+
+            <button class="incorrect">3.14</button>
+            <button class="incorrect">3.1</button>
+            <button class="incorrect">4</button>
+            <button class="correct">3</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which rule did scope of function follows ?
+            </h3>
+
+            <button class="incorrect">LGBT</button>
+            <button class="correct">LEGB</button>
+            <button class="incorrect">LGBE</button>
+            <button class="incorrect">LBEG</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                pridict the output <br>
+                num = print(round(abs(float(-78.9785))))
+            </h3>
+
+            <button class="incorrect">78.5</button>
+            <button class="incorrect">77</button>
+            <button class="correct">79</button>
+            <button class="incorrect">78</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                student = (1,2,3)<br>
+                print(student.index(1))
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">-1</button>
+            <button class="correct">0</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                this := sign indicates which operator
+            </h3>
+
+            <button class="incorrect">lamda operator</button>
+            <button class="correct">walrus operator</button>
+            <button class="incorrect">lama operator</button>
+            <button class="incorrect">panda operator</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                say = print<br>
+                say("hello, world!")<br>
+                is there any error in this code or not
+            </h3>
+
+            <button class="incorrect">yes there it is</button>
+            <button class="correct">not at all</button>
+            <button class="incorrect">who cares</button>
+            <button class="incorrect">only god knows</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                l1 = [1,2,3]<br>
+                l2 = l1<br>
+                l2.append(4)<br>
+                print(L1)<br>
+                what is the output of this ?
+            </h3>
+
+            <button class="incorrect">[123]</button>
+            <button class="incorrect">[1,2,3]</button>
+            <button class="correct">[1,2,3,4]</button>
+            <button class="incorrect">[1.2.3.4]</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <form action="/python_quiz" method="post">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}

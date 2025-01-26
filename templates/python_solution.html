@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block tilte %}
+    py_sol
+{% endblock %}
+
+{% block main %}
+    <h1>Python Quiz Solution</h1>
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                name = horse <br>
+                print(name.capitalize())<br>
+                then what will be the output ?
+            </h3>
+
+            <p class="solution-text">
+                the capitalize function in python is use to make first letter capital <br>
+                for example run -> Run
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                name='joe'<br>
+                print(name.isalnum())<br>
+                then what will be the output ?
+            </h3>
+
+            <p class="solution-text">
+                the isalnum function where isalnum stand for is alpha numeric <br>
+                it will return true if all character is ethier letter of English or number <br>
+                therefore here joe is all letter still will considered as alpha numeric
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                9_student = [1,2,3,4,5,6,7,8,9]<br>
+                print(9_student)<br>
+                is there any error in this code or not
+            </h3>
+
+            <p class="solution-text">
+                there is a proper error because in the naming of variable can't strat from a number<br>
+                instead need to use _ or a letter
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                pi = 3.14159<br>
+                print(round(pi))
+            </h3>
+
+            <p class="solution-text">
+                round function round off the number to it's closest integer
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which rule did scope of function follows ?
+            </h3>
+
+            <p class="solution-text">
+                LEGB <br>
+                which stand for : <br>
+                L - Local<br>
+                E - Enclosing<br>
+                G - Global<br>
+                B - Built in
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                pridict the output <br>
+                num = print(round(abs(float(-78.9785))))
+            </h3>
+
+            <p class="solution-text">
+                here first the most nested function will execute first so here<br>
+                first the float function will work <br>
+                then abs stand for absolute value without any sign <br>
+                then round function to round the value to nearest integer
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                student = (1,2,3)<br>
+                print(student.index(1))
+            </h3>
+
+            <p class="solution-text">
+                simple, 1 is the first element of tuple so it will be in the 0th index if you ask why then will give you the reason <br>
+                because it is by convention
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                this := sign indicates which operator
+            </h3>
+
+            <p class="solution-text">
+                this := sign is of walrus operator
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                say = print<br>
+                say("hello, world!")<br>
+                is there any error in this code or not
+            </h3>
+
+            <p class="solution-text">
+                no there is no error because in python there a way to store function in a variable!
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                l1 = [1,2,3]<br>
+                l2 = l1<br>
+                l2.append(4)<br>
+                print(L1)<br>
+                what is the output of this ?
+            </h3>
+
+            <p class="solution-text">
+                Because both variable l1 and l2 are pointing towards the same value <br>
+                this is from the concept of thr pointers which we usually dont learn in pyhton
+            </p>
+
+        </div>
+        <p></p>
+
+
+        <form action="/python_solution" method="post">
+            <button class="btn btn-primary" type="submit">Home</button>
+        </form>
+
+    </div>
+{% endblock %}

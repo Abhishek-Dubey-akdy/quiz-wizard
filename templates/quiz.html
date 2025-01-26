@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quizzes
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Languages</th>
+                <th scope="col">Perform</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python</td>
+                <td><a href="/python_quiz">
+                    <button class="btn btn-primary" >Play</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td><a href="/c_quiz">
+                    <button class="btn btn-primary" >Play</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td><a href="/sql_quiz">
+                    <button class="btn btn-primary" >Play</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>web front pack</td>
+                <td><a href="/web_frontPack_quiz">
+                    <button class="btn btn-primary" >Play</button>
+                </a></td>
+            </tr>
+            <tr>
+                <td>trivia</td>
+                <td><a href="/trivia_quiz">
+                    <button class="btn btn-primary" >Play</button>
+                </a></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

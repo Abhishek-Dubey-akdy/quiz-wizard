@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block tilte %}
+    py_sol
+{% endblock %}
+
+{% block main %}
+    <h1>SQL Quiz Solution</h1>
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                SQL stand for ?<br>
+                1. Stucture query language<br>
+                2. struct qur lang<br>
+                3. std qur lang<br>
+                4. std qur ltd. <br>
+            </h3>
+
+            <p class="solution-text">
+                S -> Structure
+                Q -> Query
+                L -> Language
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                SQL work on?
+            </h3>
+
+            <p class="solution-text">
+                sql works on RDBMS
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                RDBMS stand for <br>
+                relational database management source<br>
+                ture or not<br>
+            </h3>
+
+            <p class="solution-text">
+                false because<br>
+                R -> relational <br>
+                DB -> database <br>
+                M -> management <br>
+                S -> system
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                alter is a ______ command ?
+            </h3>
+
+            <p class="solution-text">
+                DDL
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                would it be right to say create is DML command?
+            </h3>
+
+            <p class="solution-text">
+                Nope because<br>
+                create is a DDL type of command
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                if I want to delete a roll_no column from table student.<br>
+                alter table student ____ roll_no ;
+            </h3>
+
+            <p class="solution-text">
+                Drop
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                if I want to copy whole table product then this command will work <br>
+                create table x as select * from product;
+            </h3>
+
+            <p class="solution-text">
+                yeah because<br>
+                the select command is fecthing all reacords from the table product
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which command is use to view structure of table
+            </h3>
+
+            <p class="solution-text">
+                DESC
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                in order to get unique value of a column which command is used
+            </h3>
+
+            <p class="solution-text">
+                DISTINCT
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+            to veiw how many tables are in a database<br>
+            we can do:<br>
+            1. view tables;<br>
+            2. see tables; <br>
+            3. show tables; <br>
+            4. get tables; <br>
+            </h3>
+
+            <p class="solution-text">
+                show tables;
+            </p>
+
+
+        </div>
+        <p></p>
+
+
+        <form action="/sql_solution" method="post">
+            <button class="btn btn-primary" type="submit">Home</button>
+        </form>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    apology
+{% endblock %}
+
+{% block main %}
+    <!-- https://memegen.link/ -->
+    <!-- https://knowyourmeme.com/memes/oh-no-anyway -->
+    <img alt="{{ top }}" class="border img-fluid" src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://i.kym-cdn.com/entries/icons/original/000/034/890/jeremy_clarkson_oh_no.png&width=400" title="{{ top }}">
+{% endblock %}

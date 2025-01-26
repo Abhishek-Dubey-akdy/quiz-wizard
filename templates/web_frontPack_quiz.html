@@ -1,0 +1,275 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    python_quiz
+{% endblock %}
+
+{% block main %}
+    <h1>web front pack quiz</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section =>{
+                let buttons = section.querySelectorAll('button');
+                buttons.forEach(button =>{
+                    button.addEventListener('click', function(e) {
+                        if (!section.classList.contains('answered')) {
+                            if (button.classList.contains('correct')) {
+                                button.style.backgroundColor = '#b1eb94';
+                                section.querySelector('.feedback').innerHTML = 'correct!';
+                            }
+                            else {
+                                button.style.backgroundColor = '#f58884';
+                                section.querySelector('.feedback').innerHTML = 'incorrect :(';
+                            }
+                            section.classList.add('answered');
+                        }
+                        e.preventDefault();
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                this &lt;br&gt; tag is use for<br>
+                1. new line<br>
+                2. border<br>
+                3. call brot function <br>
+                4. background remove
+            </h3>
+            <p></p>
+
+            <button class="correct">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                this &lt;hr&gt; tag is use for<br>
+                1. homogenous row showed in screen<br>
+                2. horizontal line in screen<br>
+                3. vertical line in screen <br>
+                4. high resolution in screen <br>
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="correct">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                querySelector is a function of which language?
+            </h3>
+
+            <button class="incorrect">python</button>
+            <button class="incorrect">css</button>
+            <button class="incorrect">html</button>
+            <button class="correct">javaScript</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                first computer network was?
+            </h3>
+
+            <button class="correct">ARPANET</button>
+            <button class="incorrect">internet</button>
+            <button class="incorrect">www</button>
+            <button class="incorrect">NEST1960</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                CSS stand for ?<br>
+                1. cover style sheet<br>
+                2. control style sheet<br>
+                3. cascading style sheet<br>
+                4. color style sheet
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="incorrect">2</button>
+            <button class="correct">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                HTML stand for?<br>
+                1. hover text modle language<br>
+                2. hyper text markup language<br>
+                3. huygen text markup language<br>
+                4. high text markup language<br>
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="correct">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                the DOMContentLoaded event in JavaScript ensure that<br>
+                1. control the manipulation of document<br>
+                2. ristrict html document content<br>
+                3. the html document is passed<br>
+                4. the html document has be completely parased
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">3</button>
+            <button class="correct">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                In order to respond to the event in the client side JavaScript may use <br>
+                1. DOMContentLoaded <br>
+                2. addEventListener<br>
+                3. querySelectorEvent <br>
+                4. querySelectorAll
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="correct">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                in order to get input from user in HTML we use<br>
+                1. &lt;button&gt; tag<br>
+                2. &lt;radio&gt; tag<br>
+                3. &lt;input&gt; tag<br>
+                4. &lt;type&gt; tag <br>
+            </h3>
+
+            <button class="incorrect">1</button>
+            <button class="incorrect">2</button>
+            <button class="correct">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+
+        <div class="section" >
+            <hr>
+            <h3>
+                MVC architecture stand for <br>
+                1. Model-view-controller<br>
+                2. main-view-controller<br>
+                3. multi-vision-controller<br>
+                4. model-view-content
+            </h3>
+
+            <button class="correct">1</button>
+            <button class="incorrect">2</button>
+            <button class="incorrect">3</button>
+            <button class="incorrect">4</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which is more dynamic
+            </h3>
+
+            <button class="incorrect">website</button>
+            <button class="correct">web app</button>
+            <button class="incorrect">both</button>
+            <button class="incorrect">none</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which is/are python library/module for backend
+            </h3>
+
+            <button class="incorrect">Django</button>
+            <button class="incorrect">flask</button>
+            <button class="correct">both</button>
+            <button class="incorrect">none</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which is more easy to use for backend in python to be specific
+            </h3>
+
+            <button class="correct">flask</button>
+            <button class="incorrect">django</button>
+            <button class="incorrect">who cares</button>
+            <button class="incorrect">only god knows</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                MVC architecture can be use for what
+            </h3>
+
+            <button class="incorrect">website</button>
+            <button class="correct">web app</button>
+            <button class="incorrect">none</button>
+            <button class="incorrect">both</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+
+        <div class="section" >
+            <hr>
+            <h3>
+                This site is a ______
+            </h3>
+
+            <button class="incorrect">website</button>
+            <button class="incorrect">webpage</button>
+            <button class="correct">web app</button>
+            <button class="incorrect">server</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <p></p>
+        <form action="/web_frontPack_quiz" method="post">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block tilte %}
+    py_sol
+{% endblock %}
+
+{% block main %}
+    <h1>C Quiz Solution</h1>
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                #include &lt;stdio.h&gt; <br>
+                int main (void)<br>
+                {<br>
+                    // anything here<br>
+                }<br>
+                what this whole block of code known as in technical terms ?
+            </h3>
+
+            <p class="solution-text">
+                Boilerplate<br>
+                this is because it's a convention
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                the correct way to print<br>
+                hello, world in screen in C is ?<br>
+                    1. print('hello, world')<br>
+                    2. printf("hello, world");<br>
+                    3. printf('hello, world');<br>
+                    4. print('hello, world')<br>
+            </h3>
+
+            <p class="solution-text">
+                printf("hello, world");<br>
+                this is a correct syntax to write hello, world <br>
+                on the screen
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                malloc stand for ?<br>
+                    1. memory allocation<br>
+                    2. metual allocation<br>
+                    3. memo allocation<br>
+                    4. modle allocation<br>
+            </h3>
+
+            <p class="solution-text">
+                memory alloction, this is because <br>
+                m - memory <br>
+                alloc - alloction <br>
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                after using the memory which is allocated through malloc <br>
+                what we need to do if we will never going to use it again?
+            </h3>
+
+            <p class="solution-text">
+                free()<br>
+                because it's a good practice to free the allocated memory after use <br>
+                if not correctly dnoe can cause heap Overflow
+            </p>
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                which data structure give O(1) runtime for search?
+            </h3>
+
+            <p class="solution-text">
+                hash table<br>
+                because it desinged that way
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                what is the Big O to prepend the linked list
+            </h3>
+
+            <p class="solution-text">
+                O(1)
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                the search time required to search for an avrage case in binary tree is
+            </h3>
+
+            <p class="solution-text">
+                O(logn)<br>
+                for binary search it log to the base 2 to be sepecific
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                in array can memory be dynamically allocated?
+            </h3>
+
+            <p class="solution-text">
+                No<br>
+                that not the job of array <br>
+                these stuff more likely belongs to linked list
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                let C is a 2D array and i want to access <br>
+                2nd element of the 1st element from the 2D array<br>
+                then how can i access that?
+            </h3>
+
+            <p class="solution-text">
+                C[0][1]<br>
+                [0] -> first element<br>
+                [1] -> second element
+            </p>
+
+
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                C use ______ to convert source code into machine level code
+            </h3>
+
+            <p class="solution-text">
+                compiler
+            </p>
+
+
+        </div>
+        <p></p>
+
+
+        <form action="/c_solution" method="post">
+            <button class="btn btn-primary" type="submit">Home</button>
+        </form>
+
+    </div>
+{% endblock %}

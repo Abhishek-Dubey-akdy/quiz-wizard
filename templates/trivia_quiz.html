@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    python_quiz
+{% endblock %}
+
+{% block main %}
+    <h1>trivia quiz</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section =>{
+                let buttons = section.querySelectorAll('button');
+                buttons.forEach(button =>{
+                    button.addEventListener('click', function(e) {
+                        if (!section.classList.contains('answered')) {
+                            if (button.classList.contains('correct')) {
+                                button.style.backgroundColor = '#b1eb94';
+                                section.querySelector('.feedback').innerHTML = 'correct!';
+                            }
+                            else {
+                                button.style.backgroundColor = '#f58884';
+                                section.querySelector('.feedback').innerHTML = 'incorrect :(';
+                            }
+                            section.classList.add('answered');
+                        }
+                        e.preventDefault();
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <div class="section" >
+            <hr>
+            <h3>
+                Quote by "who gonna carry the boat"
+            </h3>
+            <p></p>
+
+            <button class="correct">david goggins</button>
+            <button class="incorrect">carry lord</button>
+            <button class="incorrect">charle wings</button>
+            <button class="incorrect">russsel</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                who is the weakest?
+            </h3>
+
+            <button class="correct">skibidi</button>
+            <button class="incorrect">lolo</button>
+            <button class="incorrect">yolo</button>
+            <button class="incorrect">weak</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                what is the enery you give off called
+            </h3>
+
+            <button class="incorrect">lura</button>
+            <button class="correct">aura</button>
+            <button class="incorrect">rizz</button>
+            <button class="incorrect">nothing</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                the streamer who love Ronaldo
+            </h3>
+
+            <button class="incorrect">newy</button>
+            <button class="incorrect">messi</button>
+            <button class="incorrect">seepdy</button>
+            <button class="correct">ishowspeed</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                what do you call a strong independent indivisual
+            </h3>
+
+            <button class="incorrect">gamma</button>
+            <button class="incorrect">beta</button>
+            <button class="incorrect">alpha</button>
+            <button class="correct">sigma</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                I can't talk i'm _______
+            </h3>
+
+            <button class="incorrect">chad</button>
+            <button class="correct">mewing</button>
+            <button class="incorrect">skibidi</button>
+            <button class="incorrect">god</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+        <div class="section" >
+            <hr>
+            <h3>
+                i _____ all of you
+            </h3>
+
+            <button class="incorrect">surpass</button>
+            <button class="incorrect">moog</button>
+            <button class="correct">mog</button>
+            <button class="incorrect">meeg</button>
+            <h4 class="feedback"></h4>
+        </div>
+        <p></p>
+
+        <form action="/trivia_quiz" method="post">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}
